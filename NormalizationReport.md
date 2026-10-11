@@ -44,7 +44,7 @@ This report shows how our database design achieves Third Normal form (3 NF) acro
 * **FK**: vendor_id, references VENDOR; product_id, references PRODUCT.  
 * **Junction Table**: Breaks down the many to many relationship between VENDOR and PRODUCT.  
 * **1NF**:Single, atomic attributes.  
-* **2NF**: Price and stock_quantity depend fully on either attribute of the composite primary key. They both depend on what it is and who is selling it.  
+* **2NF**: Price and stock_quantity depend fully on both attributes of the composite primary key. They both depend on what it is and who is selling it.  
 * **3NF**: Price and stock_quantity depend only on the primary key attributes and not each other preventing transitive dependencies.   
 
 **CUSTOMER**  
