@@ -43,3 +43,69 @@ VALUES
     ('Cold Pressed', 'coldpressed@gmail.com', '612-555-0000'),
     ('Melt Artisan', 'meltartisan@gmail.com', '612-555-9876'),
     ('Blooms Bakery', 'bloomsbakery@gmail.com', '612-555-5432');
+
+-- Populate product data
+INSERT INTO product
+    (name, description)
+VALUES
+    -- Fruits
+    ('Strawberries', 'Fresh strawberries'),
+    ('Blueberries', 'Fresh blueberries'),
+    ('Raspberries', 'Fresh raspberries'),
+    ('Blackberries', 'Fresh blackberries'),
+    ('Apples', 'Red apples'),
+    ('Peaches', 'Fresh peaches'),
+    ('Pears', 'Fresh pears'),
+    ('Watermelon', 'Seedless watermelon'),
+    ('Cantaloupe', 'Fresh cantaloupe'),
+    ('Cherries', 'Red cherries'),
+
+    -- Vegetables
+    ('Carrots', 'Fresh carrots'),
+    ('Potatoes', 'Russet potatoes'),
+    ('Tomatoes', 'Fresh tomatoes'),
+    ('Cucumbers', 'Fresh cucumbers'),
+    ('Sweet Corn', 'Fresh sweet corn'),
+    ('Green Beans', 'Fresh green beans'),
+    ('Broccoli', 'Fresh broccoli'),
+    ('Lettuce', 'Green leaf lettuce'),
+    ('Bell Peppers', 'Fresh bell peppers'),
+    ('Yellow Onions', 'Fresh yellow onions'),
+
+    -- Bakery
+    ('Sourdough Bread', 'Homemade sourdough bread'),
+    ('White Bread', 'Fresh white bread'),
+    ('Blueberry Muffins', 'Blueberry muffins'),
+    ('Chocolate Cookies', 'Chocolate chip cookies'),
+    ('Apple Pie', 'Homemade apple pie'),
+    ('Cinnamon Rolls', 'Fresh cinnamon rolls'),
+    ('Banana Bread', 'Homemade banana bread'),
+    ('Croissants', 'Buttery croissants'),
+
+    -- Honey and Preserves
+    ('Raw Honey', 'Pure raw honey'),
+    ('Maple Syrup', 'Pure maple syrup'),
+    ('Strawberry Jam', 'Strawberry jam'),
+    ('Blueberry Jam', 'Blueberry jam'),
+    ('Apple Butter', 'Homemade apple butter'),
+    ('Pickles', 'Dill pickles'),
+    ('Raspberry Jam', 'Raspberry jam'),
+
+    -- Dairy and Eggs
+    ('Brown Eggs', 'Farm fresh eggs'),
+    ('Whole Milk', 'Fresh whole milk'),
+    ('Cheddar Cheese', 'Cheddar cheese'),
+    ('Goat Cheese', 'Fresh goat cheese'),
+    ('Butter', 'Fresh butter'),
+
+    -- Drinks and Other Products
+    ('Apple Cider', 'Fresh apple cider'),
+    ('Cold Brew Coffee', 'Cold brew coffee'),
+    ('Strawberry Lemonade', 'Fresh strawberry lemonade'),
+    ('Hot Cocoa Mix', 'Chocolate cocoa mix'),
+    ('Pumpkin Bread', 'Homemade pumpkin bread'),
+    ('Pumpkin Pie', 'Homemade pumpkin pie'),
+    ('Garlic', 'Fresh garlic'),
+    ('Fresh Basil', 'Fresh basil'),
+    ('Sunflower Bouquet', 'Sunflower bouquet'),
+    ('Lavender Bundle', 'Dried lavender bundle');
