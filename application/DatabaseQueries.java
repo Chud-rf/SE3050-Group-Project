@@ -159,18 +159,19 @@ public class DatabaseQueries {
     public List<ProductListingRow> searchProducts(String keyword) throws SQLException, ClassNotFoundException {
         String sql = """
             SELECT p.product_id,
-                   p.name AS product_name,
-                   p.description,
-                   vp.price,
-                   vp.stock_quantity,
-                   v.vendor_id,
-                   v.name AS vendor_name,
-                   m.market_id,
-                   m.name AS market_name
-            FROM product p
-            JOIN vendor_product vp ON p.product_id = vp.product_id
-            JOIN vendor v ON vp.vendor_id = v.vendor_id
-            JOIN market m ON v.market_id = m.market_id
+		       p.name AS product_name,
+		       p.description,
+		       vp.price,
+		       vp.stock_quantity,
+		       v.vendor_id,
+		       v.name AS vendor_name,
+		       m.market_id,
+		       m.name AS market_name
+	  		FROM product p
+		    JOIN vendor_product vp ON p.product_id = vp.product_id
+		    JOIN market_vendor mv ON vp.vendor_id = mv.vendor_id
+		    JOIN market m ON mv.market_id = m.market_id
+		    JOIN vendor v ON mv.vendor_id = v.vendor_id
             WHERE p.name LIKE ? OR p.description LIKE ?
             ORDER BY p.name ASC
             """;
@@ -183,18 +184,19 @@ public class DatabaseQueries {
     public List<ProductListingRow> getProductsByVendor(String vendorName) throws SQLException, ClassNotFoundException {
         String sql = """
             SELECT p.product_id,
-                   p.name AS product_name,
-                   p.description,
-                   vp.price,
-                   vp.stock_quantity,
-                   v.vendor_id,
-                   v.name AS vendor_name,
-                   m.market_id,
-                   m.name AS market_name
+               p.name AS product_name,
+               p.description,
+               vp.price,
+               vp.stock_quantity,
+               mv.vendor_id,
+               v.name AS vendor_name,
+               mv.market_id,
+               m.name AS market_name
             FROM product p
             JOIN vendor_product vp ON p.product_id = vp.product_id
-            JOIN vendor v ON vp.vendor_id = v.vendor_id
-            JOIN market m ON v.market_id = m.market_id
+            JOIN market_vendor mv ON vp.vendor_id = mv.vendor_id
+            JOIN market m ON mv.market_id = m.market_id
+            JOIN vendor v ON mv.vendor_id = v.vendor_id
             WHERE v.name LIKE ?
             ORDER BY p.name ASC
             """;
