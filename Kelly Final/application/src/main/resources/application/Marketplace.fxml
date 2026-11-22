@@ -22,7 +22,7 @@
    <top>
       <HBox prefHeight="43.0" prefWidth="923.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="46.0" prefWidth="290.0" text="Farmers Market">
+            <Label prefHeight="46.0" prefWidth="360.0" text="Farmers Market">
                <font>
                   <Font size="42.0" />
                </font>
@@ -42,8 +42,8 @@
                      <children>
                         <TableView fx:id="marketsTable" prefHeight="605.0" prefWidth="943.0">
                           <columns>
-                            <TableColumn fx:id="marketTableName" prefWidth="75.0" text="name" />
-                            <TableColumn fx:id="marketTableLocation" prefWidth="75.0" text="location" />
+                            <TableColumn fx:id="marketTableName" prefWidth="200.0" text="name" />
+                            <TableColumn fx:id="marketTableLocation" prefWidth="200.0" text="location" />
                           </columns>
                         </TableView>
                      </children>
