@@ -41,12 +41,10 @@ CREATE TABLE market_day (
 
 CREATE TABLE vendor (
     vendor_id INT AUTO_INCREMENT NOT NULL,
-    market_id INT,
     name VARCHAR(30),
     email VARCHAR(70),
     phone_number VARCHAR(15),
-    PRIMARY KEY (vendor_id),
-    FOREIGN KEY (market_id) REFERENCES market(market_id)
+    PRIMARY KEY (vendor_id)
 );
 
 CREATE TABLE product (
@@ -54,6 +52,15 @@ CREATE TABLE product (
     name VARCHAR(30),
     description VARCHAR(100),
     PRIMARY KEY (product_id)
+);
+
+CREATE TABLE market_vendor (
+    market_id INT NOT NULL,
+    vendor_id INT NOT NULL,
+    booth_number INT,
+    PRIMARY KEY (market_id, vendor_id),
+    FOREIGN KEY (market_id) REFERENCES market(market_id),
+    FOREIGN KEY (vendor_id) REFERENCES vendor(vendor_id)
 );
 
 CREATE TABLE vendor_product (
