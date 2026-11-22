@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--ADDED-->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+
+<BorderPane prefHeight="704.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MarketplaceController">
+   <top>
+      <HBox prefHeight="43.0" prefWidth="923.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="46.0" prefWidth="290.0" text="Farmers Market">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Markets">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="marketsTable" prefHeight="605.0" prefWidth="943.0">
+                          <columns>
+                            <TableColumn fx:id="marketTableName" prefWidth="75.0" text="name" />
+                            <TableColumn fx:id="marketTableLocation" prefWidth="75.0" text="location" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Market Details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="589.0" prefWidth="943.0">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                           <children>
+                              <VBox prefHeight="589.0" prefWidth="440.0">
+                                 <children>
+                                    <Label fx:id="detailsMarketName" text="Market Name" wrapText="true">
+                                       <font>
+                                          <Font size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsAddress" text="111222 Address St, Minneapolis MN 55416" wrapText="true">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsDates" layoutX="10.0" layoutY="56.0" text="Jan 1st - Oct 1st" wrapText="true">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsMonday" layoutX="10.0" layoutY="120.0" text="Monday 9am - 9pm" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsTuesday" layoutX="10.0" layoutY="152.0" text="Tuesday 9am - 9pm" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsWednesday" layoutX="10.0" layoutY="184.0" text="Wednesday 9am - 9pm" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsThursday" layoutX="10.0" layoutY="216.0" text="Thursday 9am - 9pm" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsFriday" layoutX="10.0" layoutY="248.0" text="Friday 9am - 9pm" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsSaturday" layoutX="10.0" layoutY="280.0" text="Saturday 9am - 9pm" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="detailsSunday" layoutX="10.0" layoutY="312.0" text="Sunday 9am - 9pm" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="589.0" prefWidth="631.0">
+                                 <children>
+                                    <Pane prefHeight="80.0" prefWidth="630.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Vendor List">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <ListView fx:id="vendorsList" prefHeight="589.0" prefWidth="628.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Products">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" >
+                  <children>
+                        <!-- ADDED: Products layout container -->
+                        <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <!-- ADDED: Keyword search input and button -->
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="productSearchField" promptText="Search products by keyword..." HBox.hgrow="ALWAYS" />
+                                    <Button onAction="#handleSearchProducts" text="Search" />
+                                 </children>
+                              </HBox>
+                              <!-- ADDED: Product listings table view -->
+                              <TableView fx:id="productsTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="productColName" prefWidth="220.0" text="Product" />
+                                  <TableColumn fx:id="productColVendor" prefWidth="200.0" text="Vendor" />
+                                  <TableColumn fx:id="productColMarket" prefWidth="200.0" text="Market" />
+                                  <TableColumn fx:id="productColPrice" prefWidth="120.0" text="Price" />
+                                  <TableColumn fx:id="productColStock" prefWidth="120.0" text="Stock" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pre-order">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" >
+                  <children>
+                        <!-- ADDED: Pre-order form container -->
+                        <VBox spacing="12.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <children>
+                              <Label text="Place a Pre-Order">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <!-- ADDED: Pre-order input fields -->
+                              <TextField fx:id="preOrderCustomerIdField" maxWidth="320.0" promptText="Customer ID" />
+                              <TextField fx:id="preOrderVendorIdField" maxWidth="320.0" promptText="Vendor ID" />
+                              <TextField fx:id="preOrderProductIdField" maxWidth="320.0" promptText="Product ID" />
+                              <TextField fx:id="preOrderQuantityField" maxWidth="320.0" promptText="Quantity" />
+                              <!-- ADDED: Submit button and status label -->
+                              <Button onAction="#handlePlacePreOrder" text="Place Pre-Order" />
+                              <Label fx:id="preOrderStatusLabel" text="" wrapText="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TabPane>
+   </center>
+</BorderPane>
