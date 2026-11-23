@@ -1,5 +1,5 @@
 # SE3050-Group-Project
-SE 3050 Group Project - Chad Fletcher, Kelly Izzard, Omar Hassan, Cal Berglund
+SE 3050 Group Project - Chad Fletcher, Kelly Izzard, Cal Berglund
 
 Final code in Kelly Final/application
 Video Presentation: https://drive.google.com/file/d/1quJSyCecnDwmfKcaVau-yImw3csfFX_i/view?usp=sharing
