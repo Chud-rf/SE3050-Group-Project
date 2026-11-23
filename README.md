@@ -1,6 +1,10 @@
 # SE3050-Group-Project
 SE 3050 Group Project - Chad Fletcher, Kelly Izzard, Omar Hassan, Cal Berglund
 
+Final code in Kelly Final/application
+Video Presentation: https://drive.google.com/file/d/1quJSyCecnDwmfKcaVau-yImw3csfFX_i/view?usp=sharing
+
+
 Github Project Board:
 <img width="1432" height="848" alt="image" src="https://github.com/user-attachments/assets/7ea77c14-ef9c-48c3-925e-8619220ed261" />
 
